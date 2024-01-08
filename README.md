@@ -1,7 +1,7 @@
 this is a message-app application
 how to use it
 1.make sure you have mongo and rabbit mq
-2.make sure you have mongo
+2. You can run docker-compose.yml for mongo and rabbit mq
 3. Type npm install
 4. to run npm run dev
 5. To run, go to localhost:4000/messages/app
