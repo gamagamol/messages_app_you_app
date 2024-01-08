@@ -24,10 +24,15 @@ services:
     build:
       context: ./messages-app
       dockerfile: Dockerfile
+    volumes:
+      - /usr/src/app/node_modules
+      - ./messages-app:/usr/src/app
+    command: sh -c "npm install -g nodemon && npm install && npm run dev "
     ports:
       - '4000:4000'
     depends_on:
       - mongo
+      - rabbitmq
     networks:
       - app-network
 
